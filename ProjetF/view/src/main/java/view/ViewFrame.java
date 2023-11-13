@@ -45,7 +45,7 @@ public class ViewFrame extends JFrame  {
 	private IModel						model;
 
 	/** The controller. */
-
+//cindy
 	private static IController				controller;
 
 	/** The Constant serialVersionUID. */
