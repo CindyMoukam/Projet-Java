@@ -81,7 +81,6 @@ public class ViewFrame extends JFrame  {
 
 
 	/**
-	 *
 	 * Instantiates a new view frame.
 	 */
 
