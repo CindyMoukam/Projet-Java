@@ -1,0 +1,17 @@
+nbre de monstres présents aux comportempents différents et fonctionnels
+nbr de niveau présent et fonctionnel
+- le heros se deplace corectement et detruit la terre en avançant
+- le hero est bloqués par les murs et les rochers
+- le hheros peut pousser un rocher sauf si celui est bloqué par un murs; un rocher ou d'un diamant
+- le heros est tué par la chute d'un rocher ou d'un diamant
+- Un rocher posé sur un rocher ou un diamant tombe sur une case adjacente libre
+- les monstres sont tués par la chute d'un rocher et diamant
+- le heros peut ramasser des diamants
+- les monstres ne passent pas à travers les élément du decor(diamant ,rocher)
+- les monstres ne poussent pas les rochers
+- les monstres ne creusent pas
+- le jeu se termine lorsque tous les diamants ont été ramassé
+- Aucune erreur lors de la compilation
+-l'utilisation des accesseurs est systematique
+-la javadoc est présente pour toutes les méthodes et tous les attributs
+-la javadoc doit etre enrichie manuellement pour les élément plus complexes et ne corresponds pas uniquement à la documentations autogenerée
