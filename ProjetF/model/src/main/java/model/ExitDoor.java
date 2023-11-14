@@ -1,8 +1,12 @@
 package model;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,8 +26,14 @@ public class ExitDoor extends Objet{
 
     public ExitDoor(int x, int y) {
         super(x, y, 32,32);
-        super.icoObj=new ImageIcon(getClass().getResource("/images/Exit1.PNG"));
-        super.imgObj=super.icoObj.getImage();
+        try {
+            BufferedImage bigImg = ImageIO.read(new File("ProjetF/model/images/Exit1.png"));
+        }
+        catch(IOException e){
+
+        }
+        //super.icoObj=new ImageIcon(getClass().getResource("/images/Exit1.PNG"));
+        //super.imgObj=super.icoObj.getImage();
         Timer time=new Timer();
         TimerTask task=new TimerTask() {
 
@@ -52,7 +62,7 @@ public class ExitDoor extends Objet{
 
     public void setImgObj(String num) {
         String str="/images/Exit" + num+ ".PNG";
-        super.icoObj=new ImageIcon(getClass().getResource(str));
-        super.imgObj = super.icoObj.getImage();
+        //super.icoObj=new ImageIcon(getClass().getResource(str));
+       // super.imgObj = super.icoObj.getImage();
     }
 }

@@ -1,6 +1,10 @@
 package model;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 
 /**
@@ -21,8 +25,14 @@ public class Ground extends Objet{
 
     public Ground(int x, int y) {
         super(x, y, 32,32);
-        super.icoObj=new ImageIcon(getClass().getResource("/images/sol.png"));
-        super.imgObj=super.icoObj.getImage();
+        try {
+            BufferedImage bigImg = ImageIO.read(new File("ProjetF/model/images/sol.png"));
+        }
+        catch(IOException e){
+
+        }
+        //super.icoObj=new ImageIcon(getClass().getResource("/images/sol.png"));
+        //super.imgObj=super.icoObj.getImage();
     }
 
 }

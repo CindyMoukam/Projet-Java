@@ -24,7 +24,7 @@ public class Diamond extends Objet{
     public Diamond(int x, int y) {
         super(x, y,32,32);
 
-        super.icoObj=new ImageIcon(getClass().getResource("/images/diam1.png"));
+        super.icoObj=new ImageIcon("/images/diam1.png");
         super.imgObj=super.icoObj.getImage();
         super.falling=false;
         super.velocity=0;
@@ -56,7 +56,7 @@ public class Diamond extends Objet{
 
     public void setImgObj(String num) {
         String str="/images/diam" + num+ ".png";
-        super.icoObj=new ImageIcon(getClass().getResource(str));
+        super.icoObj=new ImageIcon(str);
         super.imgObj = super.icoObj.getImage();
 
     }

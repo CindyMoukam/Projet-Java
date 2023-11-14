@@ -16,7 +16,7 @@ public class Roc extends Objet{
 
     public Roc(int x, int y) {
         super(x, y, 32,32);
-        super.icoObj=new ImageIcon(getClass().getResource("/images/roche.png"));
+        super.icoObj=new ImageIcon("/images/roche.png");
         super.imgObj=super.icoObj.getImage();
         super.falling=false;
         super.velocity=0;
@@ -47,7 +47,7 @@ public class Roc extends Objet{
      */
     public void setImgObj2(String nom) {
         String str="/images/" +nom+ ".png";
-        super.icoObj=new ImageIcon(getClass().getResource(str));
+        super.icoObj=new ImageIcon(str);
         super.imgObj = super.icoObj.getImage();
 
     }

@@ -52,7 +52,7 @@ final class DBConnection {
 	public Boolean open() {
 
 		try {
-			Class.forName("org.postgresql.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			this.connection = DriverManager.getConnection(dbProperties.getUrl(), dbProperties.getLogin(), dbProperties.getPassword());
 		} catch (final ClassNotFoundException e) {
 
@@ -62,7 +62,7 @@ final class DBConnection {
 			e.printStackTrace();
 			return false;
 		}
-		System.out.println("Connected?");
+		System.out.println("Successfully Connected");
 		return true;
 	}
 

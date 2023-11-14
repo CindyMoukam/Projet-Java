@@ -19,14 +19,14 @@ public class DBProperties extends Properties {
 	private final static String	PROPERTIES_FILE_NAME	= "model.properties";
 
 	/** The url. */
-	private  String		url				= "jdbc:postgresql://localhost:5432/javapetri?autoReconnect=true&useSSL=false&maxReconnects=10";
+	private  String		url				= "jdbc:mysql://localhost:3306/projet?serverTimezone=UTC&autoReconnect=true&useSSL=false";
 
 	/** The login. */
 
-	private  String		login			= "postgres";
+	private  String		login			= "root";
 
 	/** The password. */
-	private String		password		= "Mgm+02C";
+	private String		password		= "cindy";
 
 	/**
 	 * Instantiates a new DB properties.

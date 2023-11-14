@@ -1,9 +1,15 @@
 package model;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 /**
  *
@@ -21,6 +27,7 @@ public class Dash extends Character{
     /**Tells if the character is doing nothing*/
     private boolean rest;
 
+    Image image;
     int countanimation=0;
     /**
      *
@@ -31,11 +38,18 @@ public class Dash extends Character{
      * @see Character
      */
 
-    public Dash(int x, int y) {
+    public Dash(int x, int y)  {
         super(x, y,32,32);
         this.score=0;
-        super.icoChar=new ImageIcon(getClass().getResource("/images/Dash.png"));
-        super.imgChar=super.icoChar.getImage();
+        try {
+            BufferedImage bigImg = ImageIO.read(new File("ProjetF/model/images/Dash.png"));
+        }
+        catch(IOException e){
+
+        }
+        //super.icoChar = new ImageIcon(Objects.requireNonNull(getClass().getResource("images/Dash.png")));
+        //super.icoChar=new ImageIcon(Objects.requireNonNull(getClass().getResource("ProjetF/model/images/Dash.png")));
+        //super.imgChar=super.icoChar.getImage();
         super.walks=false;
         this.walksleft=false;
         this.walksright=false;
@@ -119,8 +133,8 @@ public class Dash extends Character{
 
     public void setImgObj2(String nom) {
         String str="/images/" +nom+ ".png";
-        super.icoChar=new ImageIcon(getClass().getResource(str));
-        super.imgChar = super.icoChar.getImage();
+        //super.icoChar=new ImageIcon(getClass().getResource(str));
+        //super.imgChar = super.icoChar.getImage();
 
     }
 
@@ -224,19 +238,33 @@ public class Dash extends Character{
     }
 
     /**
-     *
-     * @param frequence
-     * the value of the frequence
-     * @return img
-     * animation for the dash
+     * @param frequence the value of the frequence
+     * @return
      */
 
-    public Image Imagewalk(int frequence) {
-        String str ="/images/Dash.png";
-        ImageIcon ico;
+    // public Image Imagewalk(int frequence) {
+        //String str ="C:/Users/SOFT/Desktop/Projet Java/ProjetF/model/images/Dash.png";
+        //Image img;
+        //ImageIcon ico = new ImageIcon(getClass().getResource(str));
+        //img =ico.getImage();
+
+    public BufferedImage Imagewalk(int frequence) {
+        String str = "C:/Users/SOFT/Desktop/Projet Java/ProjetF/model/images/Dash.png";
         Image img;
+        File file = new File(str);
+        try {
+            URL url = file.toURI().toURL();
+            ImageIcon ico = new ImageIcon(url);
+            img = ico.getImage();
+        } catch (MalformedURLException e) {
+            // Gérer l'exception si l'URL est mal formée
+            e.printStackTrace();
+            // Ou lancer une nouvelle exception appropriée
+        }
+        //return img;
+
         if(this.walks==false) {
-            str="/images/Dash.png";
+            //str="C:/Users/SOFT/Desktop/Projet Java/ProjetF/model/images/Dash.png";
         }else {
             this.compteur++;
             if(this.compteur/frequence==0) {
@@ -265,9 +293,9 @@ public class Dash extends Character{
                 }
             }
         }
-        ico = new ImageIcon(getClass().getResource(str));
-        img =ico.getImage();
-        return img;
+
+        //return img;
+        return null;
     }
 
 

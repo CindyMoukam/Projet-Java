@@ -28,9 +28,7 @@ public class Level extends Entity{
      * @return
      * return the map of the level
      */
-    public char[][] getMap() {
-        return map;
-    }
+    public char[][] getMap() {return map;}
     /**
      *
      * @param map

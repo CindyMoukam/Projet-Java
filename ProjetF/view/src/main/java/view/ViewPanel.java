@@ -359,8 +359,8 @@ public class ViewPanel extends JPanel implements Observer {
 		g2.drawString(Integer.toString(nbr_diamond),130, 22);
 		g2.drawString(Integer.toString(dash.getScore()),30, 22);
 		g2.drawString(Integer.toString(timegame),125, 57);
-		g2.drawImage(new ImageIcon(getClass().getResource("/images/diam_icon.png")).getImage(),105, 8,null);
-		g2.drawImage(new ImageIcon(getClass().getResource("/images/horloge_icon.png")).getImage(),105,40,null);
+		g2.drawImage(new ImageIcon("C:/Users/SOFT/Desktop/Projet Java/ProjetF/view/images/diam_icon.png").getImage(), 105, 8, null);
+		g2.drawImage(new ImageIcon("C:/Users/SOFT/Desktop/Projet Java/ProjetF/view/images/horloge_icon.png").getImage(),105,40,null);
 	}
 
 
