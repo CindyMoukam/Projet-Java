@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class DAOLevel {
 
     /**instanciate a DBConnection*/
-    private static DBConnection cnx=new DBConnection();
+    private static final DBConnection cnx=new DBConnection();
 
     /**
      *
