@@ -5,17 +5,16 @@ package contract;
  *
  * @author Jean-Aymeric Diet
  */
-
 public enum ControllerOrder {
 
-	/** The Left. */
-	LEFT,
-	/** The Right. */
-	RIGHT,
-	/** The Up. */
+	/** Going UP */
 	UP,
-	/** The Down. */
-	DOWN
+	/** Going LEFT */
+	LEFT,
+	/** Going RIGHT */
+	RIGHT,
+	/** Going DOWN */
+	DOWN,
+	/** Going NOTHING */
+	NOTHING
 }
-
-
