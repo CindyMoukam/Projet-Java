@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * The Interface IView.
  *
- * @author De Grossi Hugo
+ *
  */
 public interface IView {
 

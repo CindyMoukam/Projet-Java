@@ -10,7 +10,7 @@ import entity.MapTile;
 /**
  * The Interface IModel.
  *
- * @author De Grossi Hugo
+
  */
 public interface IModel {
 

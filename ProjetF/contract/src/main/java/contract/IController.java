@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * The Interface IController.
  *
- * @author De Grossi Hugo
+ *
  */
 public interface IController {
 
